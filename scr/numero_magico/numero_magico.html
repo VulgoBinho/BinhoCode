@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Mágico</title>
+</head>
+<style>
+    body
+    {
+        font-family: 'Kanit', sans-serif;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size:  100%;
+        background-image: url("https://i.pinimg.com/originals/74/43/a3/7443a31b6a19e5630b94a6538ff9bdd1.gif");
+        /* background-image: url("https://wallpaperaccess.com/full/1477273.jpg"); */
+        
+    }
+    input{
+        text-align: center;
+    }
+    #inpentrada{
+        border-radius: 20px;
+        width: 140px;
+        height: 25px;
+        color: crimson;
+        border-color: crimson;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+
+    }
+    #inppvp{
+        border-radius: 20px;
+        width: 140px;
+        height: 25px;
+        color: crimson;
+        border-color: crimson;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+
+    }
+    h1{
+        color: rgb(195, 21, 21);
+        font-size: 40px;
+    }
+    button{
+        margin: 15px;
+        font-family: 'Kanit', sans-serif;
+        background-color: cornflowerblue;
+        border-radius: 15px;
+        font-size: 30px;
+    }
+    #idpvp{
+        margin: 12px;
+        border-color: crimson;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: crimson;
+    }
+    #idfacil{
+        cursor: pointer;
+        margin: 12px;
+        border-color: rgb(0, 181, 0);
+        background-color: rgba(38, 165, 12, 0.5);
+        color: rgb(0, 0, 0);
+    }
+    #idmedio{
+        cursor: pointer;
+        margin: 12px;
+        border-color: rgb(234, 199, 0);
+        background-color: rgba(208, 208, 13, 0.5);
+        color: rgb(0, 0, 0);
+    }
+    
+    #iddificil{
+        cursor: pointer;
+        margin: 12px;
+        border-color: rgb(208, 87, 22);
+        background-color: rgba(208, 87, 22, 0.5);
+        color: rgb(0, 0, 0);
+    }
+    h4{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    div{
+        margin: 20px;
+    }
+    #title123{      
+        background-color: rgba(116, 116, 116, 0.5);
+        max-width: 300px;
+        margin-left: 530px;
+        border-radius: 20px;
+    }
+    #info3{
+        background-color: rgba(116, 116, 116, 0.5);
+        max-width: 200px;
+        margin-left: 42%;
+        border-radius: 20px;
+    }
+    #info4{
+        background-color: rgba(116, 116, 116, 0.5);
+        max-width: 400px;
+        margin-left: 35%;
+        border-radius: 20px;
+    }
+    #divfacil{
+        font-size: 20px;
+        max-width: 320px;
+        background-color: rgba(33, 131, 13, 0.748);
+        margin-left: 38%;
+        border-radius: 20px;
+    }
+    #str1{
+        color: rgb(54, 250, 15);
+    }
+    #idproximo{
+        cursor: pointer;
+        font-size: 25px;
+        margin: 12px;
+        border-color: crimson;
+        background-color: rgba(107, 107, 107, 0.618);
+        color: rgb(0, 0, 0);
+    }
+    #idproximo1{
+        cursor: pointer;
+        font-size: 25px;
+        margin: 12px;
+        border-color: crimson;
+        background-color: rgba(107, 107, 107, 0.618);
+        color: rgb(0, 0, 0);
+    }
+    #proxpvp{
+        cursor: pointer;
+        font-size: 25px;
+        margin: 12px;
+        border-color: crimson;
+        background-color: rgba(107, 107, 107, 0.618);
+        color: rgb(0, 0, 0);
+    }
+    #divsaida{
+        background-color: rgba(109, 109, 109, 0.563);
+        max-width: 400px;
+        margin-left: 35%;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+    #divsaida1{
+        background-color: rgba(220, 20, 60, 0.5);
+        max-width: 400px;
+        margin-left: 35%;
+        border-radius: 20px;
+        font-size: 20px;
+        font-size: 25px;
+        color:black;
+    }
+    #divdificil{
+        font-size: 20px;
+        background-color: rgba(208, 87, 22, 0.5);
+        max-width: 350px;
+        margin-left: 37%;
+        border-radius: 20px;
+    }
+   #divmedio{
+    font-size: 20px;
+    background-color: rgba(208, 208, 13, 0.5);
+    max-width: 350px;
+    margin-left: 37%;
+    border-radius: 20px;
+   }
+   #str2{
+       color: rgb(255, 255, 0);
+   }
+   #str3{
+       color: rgb(255, 89, 0);
+   }
+   #info5{
+    font-size: 25px;
+    background-color: rgba(116, 116, 116, 0.5);
+    max-width: 400px;
+    margin-left: 35%;
+    border-radius: 20px;
+   }
+   #divnot1{
+    font-size: 25px;
+    background-color: rgba(116, 116, 116, 0.5);
+    max-width: 400px;
+    margin-left: 35%;
+    border-radius: 20px;
+   }
+   #divsaida{
+       font-size: 30px;
+       color:black;
+   }
+   #idpvp{
+    cursor: pointer;
+   }
+  
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+<body>
+    <div id="title123"><h1 id="info">Número Mágico</h1></div>
+    <div id="info4"><h2 id="info2">
+        Selecione um nivel para jogar PvE
+    </h2></div>
+    <button onclick="facil()" id="idfacil">
+        Fácil
+    </button>
+    <button onclick="medio()" id="idmedio">
+        Médio
+    </button>
+    <button onclick="dificil()" id="iddificil">
+        Díficil
+    </button>
+    <h2 id="info3">Multiplayer</h2>
+    <div><button onclick="pvp()" id="idpvp">
+        PvP
+    </button></div>
+    <div id="divfacil"><h4 id='msnfacil' style='display: none;'>
+       <strong id="str1">Fácil</strong> : Chute um numero de 0 a 10!
+    </h4></div>
+    <div id="divmedio"><h4 id='msnmedio' style='display: none;'>
+        <strong id="str2">Médio</strong> : Chute um numero de 0 a 100!
+    </h4></div>
+    <div id="divdificil"><h4 id='msndificil' style='display: none;'>
+        <strong id="str3">díficil</strong> : Chute um numero de 0 a 1000!
+    </h4></div>
+    <div id="info5"><h4 id="idnot" style="display: none;">
+        Escolha um numero para seu oponente acertar
+    </h4></div>
+    <div><input type="password" id="inppvp" placeholder="Digite..." style="display: none;"></div>
+    <div id="divnot1"><h4 id="idnot1" style="display: none;">
+        Agora tente acertar o numero!
+    </h4></div>
+    <div><input type="number" id="inpentrada" placeholder="Digite..." style="display: none;"></div>
+    <div><button onclick="proximo()" id="idproximo" style="display: none;">
+        <strong id="stro">
+        Próximo
+        </strong>
+    </button></div>
+    <div><button onclick="proximo1()" id="idproximo1" style="display: none;">
+        <strong id="stro">
+        Próximo
+        </strong>
+    </button></div>
+    <div><button onclick="proxpvp()" id="proxpvp" style="display: none;">
+        <strong id="stro">
+        Proximo
+        </strong>
+    </button></div>
+    <div id="divsaida">
+        
+        
+    </div>
+    <div id="divsaida1">
+
+    </div>
+
+    <script>
+        var numero
+        var entrada = document.getElementById("inpentrada")
+        var cont = Number(0)
+        function pvp()
+        {
+            document.getElementById("idnot").style="display: inline;"
+            document.getElementById("inppvp").style="display: inline;"
+            document.getElementById("idproximo1").style="display: inline;"
+            document.getElementById("inppvp").style="display: inline;"
+            document.getElementById("info3").style="display: none;"
+            document.getElementById("info2").style="display: none;"
+            reset()
+        }
+        function proximo1()
+        {
+            document.getElementById('idnot1').style="display: inline;"
+            document.getElementById('proxpvp').style="display: inline;"
+            document.getElementById("idnot").style="display: none;"
+            document.getElementById("inppvp").style="display: none;"
+            document.getElementById("idproximo1").style="display: none;"
+            document.getElementById('inpentrada').style="display: inline;"
+            
+
+        }
+        function proxpvp()
+        {
+            cont++
+            var entrada = document.getElementById("inpentrada")
+            // entrada=Number(entrada)
+            var pvp1 = document.getElementById("inppvp")
+            console.log(entrada.value)
+            if(entrada.value==pvp1.value)
+            {
+                alert(`Parabéns\nVocê acertou o numero do seu oponente na ${cont}° tentativa!`)
+                location.reload()
+            }
+            else if(entrada.value>pvp1.value)
+            {
+                document.getElementById("divsaida").innerHTML=`Seu numero é muito alto...<br>Tente outro numero!`
+                
+            }
+            else if(entrada.value<pvp1.value)
+            {
+                document.getElementById("divsaida").innerHTML=`Seu numero é muito baixo...<br>Tente outro numero!`
+            }
+            document.getElementById("divsaida1").innerText=`Tentativa N°${cont} errada!`
+        }
+        function facil()
+        {
+            numero = Math.floor(Math.random()*10)+1
+            console.log(numero)
+            document.getElementById('msnfacil').style='display: inline;'
+            document.getElementById('inpentrada').style="display: inline;"
+            
+            document.getElementById('idproximo').style="display: inline;"
+            document.getElementById("info3").style="display: none;"
+            document.getElementById("info2").style="display: none;"
+            reset()
+        }
+        
+        function medio()
+        {
+            numero = Math.floor(Math.random()*100)+1
+            document.getElementById('msnmedio').style='display: inline;'
+            console.log(numero)
+            document.getElementById('inpentrada').style="display: inline;"
+            
+            document.getElementById('idproximo').style="display: inline;"
+            document.getElementById("info3").style="display: none;"
+            document.getElementById("info2").style="display: none;"
+            reset()
+        }
+
+        function dificil()
+        {
+            numero = Math.floor(Math.random()*1000)+1
+            console.log(numero)
+            document.getElementById('msndificil').style='display: inline;'
+            document.getElementById('inpentrada').style="display: inline;"
+            
+            document.getElementById('idproximo').style="display: inline;"
+            document.getElementById("info3").style="display: none;"
+            document.getElementById("info2").style="display: none;"
+            reset()
+        }
+        function rec()
+        {
+            location.reload()
+        }
+        function proximo()
+        {
+            cont++
+            console.log(cont)
+            if(entrada.value==numero)
+            {
+                alert(`Parabéns, vocè acertou o Numero Mágico na ${cont}° tentativa`)
+                rec()
+                // document.getElementById('divsaida').innerHTML=`Parabéns, vocè acertou o Numero Mágico na ${cont}° tentativa`
+            }
+            else if(entrada.value>numero)
+            {
+                document.getElementById('divsaida').innerHTML=`Seu numero é muito alto...<br>Tente outro numero menor!<br><label>Tentativa N°: ${cont}</label>`   
+            }
+            else if(entrada.value<numero)
+            {
+                document.getElementById('divsaida').innerHTML=`Seu numero é muito baixo...<br>Tente outro numero maior!`
+            }
+            document.getElementById("divsaida1").innerText=`Tentativa N°${cont} errada!`
+        }
+        function reset()
+        {
+            document.getElementById('idfacil').style='display: none;'
+            document.getElementById('idmedio').style='display: none;'
+            document.getElementById('iddificil').style='display: none;'
+            document.getElementById('idpvp').style='display: none'
+        }
+    </script>
+</body>
